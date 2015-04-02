@@ -1,0 +1,438 @@
+\documentclass{sigchi}
+
+% Use this command to override the default ACM copyright statement (e.g. for preprints). 
+% Consult the conference website for the camera-ready copyright statement.
+
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+
+% Arabic page numbers for submission. 
+% Remove this line to eliminate page numbers for the camera ready copy
+% \pagenumbering{arabic}
+
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{url}      % llt: nicely formatted URLs
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={Make Me Fluent: A System Designed for Learning Enlgish },
+pdfauthor={LaTeX},
+pdfkeywords={SIGCHI, proceedings, archival format},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{Make Me Fluent: A System Designed for Learning Enlgish }
+
+\numberofauthors{3}
+\author{
+  \alignauthor Chris Dobson\\
+    \affaddr{University of Toronto}\\
+    \affaddr{27 King’s College Cir, Toronto, Ontario}\\
+    \email{c.dobson@mail.utoronto.ca}\\
+  \alignauthor John Michael Lacuna\\
+    \affaddr{University of Toronto}\\
+    \affaddr{27 King’s College Cir, Toronto, Ontario}\\
+    \email{john.lacuna@mail.utoronto.ca}\\
+  \alignauthor Aileen Lin\\
+    \affaddr{University of Toronto}\\
+    \affaddr{27 King’s College Cir, Toronto, Ontario}\\
+    \email{aileenj.lin@mail.utoronto.ca}\\
+  \alignauthor Zhaoda Qu\\
+    \affaddr{University of Toronto}\\
+    \affaddr{27 King’s College Cir, Toronto, Ontario}\\
+    \email{zhaoda.qu@mail.utoronto.ca}\\
+  \alignauthor Dylan Zhang\\
+    \affaddr{University of Toronto}\\
+    \affaddr{27 King’s College Cir, Toronto, Ontario}\\
+    \email{xiaoyang.zhang@mail.utoronto.ca}\\  
+}
+
+\maketitle
+
+\begin{abstract}
+Make Me Fluent is an APP for tablet that help those non-native English speaker
+who have not spoken English for more than 5 years to learn Enlgish. The goal 
+of our design is to help our target audience improve their Engflish skills in a 
+relaxed and flexiable environment.
+\end{abstract}
+
+% \keywords{
+% 	Guides; instructions; author's kit; conference publications;
+% 	keywords should be separated by a semi-colon. \newline
+% 	\textcolor{red}{Optional section to be included in your final version, 
+%   but strongly encouraged.}
+% }
+
+% \category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous}
+
+% See: \url{http://www.acm.org/about/class/1998/}
+% for more information and the full list of ACM classifiers
+% and descriptors. \newline
+% \textcolor{red}{Optional section to be included in your final version, 
+% but strongly encouraged. On the submission page only the classifiers’ 
+% letter-number combination will need to be entered.}
+
+\section{Introduction}
+
+Basically, the system is divided into  three main functions which are reading, 
+writing, speaking and linstening. Each of them  focus on different topcis to help
+varity of people conquer their own weakness. Although there are many ways to 
+learn English like the English school, online tutorial or educational DVDs, 
+most of people especially for those who have jobs do not have enough time for 
+learning. As a result, the protable devices like tablet could easily solve 
+these problems. Our design is trying to maximize the advantages of portable 
+device to help people improve their Enlgish skills.
+
+\section{Phase 1}
+
+\subsection{Background}
+
+Many people around the world learn a second language. English is the most 
+popular second language to learn with around 1.5 million to 1.8 million 
+non-native speakers learning it. However, today’s programs for learning 
+languages provide an environment to learn English, but do not follow up on that 
+learning over the course of several years. There are courses in a more 
+traditional setting done in classrooms or online tutorials. Many of these 
+programs to learn a language are often meant to be used in the span of 6 months 
+to a year to quickly grasp the basics of a language.
+
+\subsection{Target audience}
+
+Our target audience is non-native speakers who have been living in an 
+English-speaking environment for at least 5 years, but have yet to fully 
+understand all the nuances of English and might still have difficulties in some 
+aspects of the language. Some examples of our target audience include new 
+immigrants, students studying abroad, international students and many others. 
+These groups of individuals will likely have been affected by the problem space 
+of learning how to use English in a social environment.
+
+\section{Phase 2}
+\subsection{Research Plan}
+
+Our research plan includes a questionnaire, an interview, and observation. To be
+eligible, participants must have lived in an English-speaking environment for at
+least five years, and yet still have difficulties with some aspect of English. 
+This is also the target audience for our final product. To recruit 
+participants, first we will ask friends and family members who we know fit the 
+criteria. They will be offered either an online version or a print version of 
+the questionnaire, depending on their preference. To further recruit more 
+participants, we will go to community centers and ask passersby if they have 
+lived in Canada or in another English-speaking place for at five years, if they
+still have difficulties with English, and if they have the time to participate
+in a questionnaire. To motivate and thank participants for their cooperation, we
+will offer a Timbit to people who complete the questionnaire. If participants 
+are willing to further contribute, we will ask them to leave a phone number or 
+email address. After the answers to the questions are evaluated, these 
+participants might be contacted for further participation in the more in-depth 
+interview and observation.
+
+\subsection{Research Instruments}
+
+The questionnaire includes basic questions about the participants and how they 
+have learned English. Through this questionnaire, we would like to get a basic 
+idea of what kinds of common difficulties our target audience has with learning 
+English, and their preferences for how they’d like to learn English.
+
+The interview will be flexible and the interviewer is free to ask follow-up 
+questions or ask participants to expand upon interesting answers. We hope to get
+a more in-depth understanding of how our target audience learns and uses English
+through this interview. The questions are similar to the ones in the 
+questionnaire except that they allow for more shades of subtlety due the 
+participants having more time to think about and give their answers.
+
+While the scripted interview is being conducted, participants will also be 
+observed for their use of English and any errors they make. This means that two 
+researchers will be present at the interview: one to ask the interview questions 
+and take notes on the content of the answers, and one to take notes on the 
+participant’s English and how the answers are given.
+
+\section{Phase 3}
+\subsection{Research Results}
+From the collective of the research conducted, it is found that most users tend to find their writing, reading and listening to others to be their biggest strengths, while speaking is their biggest weakness. While not all users claim that these are also their strengths and weaknesses, the focus seems to be on speaking, with some attention to other areas of English as well.
+
+The users tend to find watching and listening to TV, movies, or videos in general to be most helpful. Reading English books and novels are also most helpful to the users. What users found least helpful is learning English in non-English speaking countries where their English speaking proficiency is not that great.
+
+With many of the users being comfortable with learning English online or on their devices, most of them are not too comfortable with speaking with another person while learning English. This directly correlates to the reason as to why many of the users are finding speech to be their biggest weakness, and we must find a way to fix or improve on this.
+
+\subsection{Stakeholders’ Descriptions}
+
+The target audience itself is a large stakeholder in this system. People who have been living in an English-speaking environment for at least 5 years and feel they would still like to improve their English will benefit the most from our product.
+
+Other stakeholders include educators: not only English language educators but educators in general, since a solid grasp of English is essential to communicating and performing well in school.
+
+Another possible stakeholder is anyone involved with immigration services and thus involved with people who have recently moved permanently to an English-speaking environment.
+
+
+
+
+\subsection{Primary Personas:}
+English-user Edna is 22 and started learning English twelve years ago in school in Hong Kong. She moved to Canada with her family six years ago when she was 16 and is currently in university. She feels that although she had been learning English for an hour each day since she was 10, the classroom learning experience did not fully prepare her for interacting with real English speakers in everyday life.
+
+She is mostly fluent in English, except for when communicating topics she’s not familiar with; she sometimes gets nervous and feels her English worsens in these situations. She sometimes feels frustrated that her English is just a little off from that of her peers, and wishes she was more confident.
+
+She is the most comfortable with her reading skills, but feels her speaking and writing need some work.
+% \begin{figure}[!h]
+% \centering
+% \includegraphics[width=0.9\columnwidth]{Figure1}
+% \caption{With Caption Below, be sure to have a good resolution image
+%   (see item D within the preparation instructions).}
+% \label{fig:figure1}
+% \end{figure}
+
+\subsection{Design Principles And Objective}
+According to our researches, most of our users have problems in speaking while learning English due to the lack of practices as well as confidence. Moreover, there exists a large quantity of users that don’t have enough time going to language school since the restriction of jobs and school works. However, most of them are using Internet every day. As a result, we are going to use a visual and voiced device which can be connected to Internet to help them study English. Help users improve their English proficiency and possibly fix any problems they are having. These could include speaking, writing, reading, or understanding depending on their needs.
+
+% Use a numbered list of references at the end of the article, ordered
+% alphabetically by first author, and referenced by numbers in brackets
+% \cite{ethics,
+%   Klemmer:2002:WSC:503376.503378,
+%   Mather:2000:MUT,
+%   Zellweger:2001:FAO:504216.504224}. For
+% papers from conference proceedings, include the title of the paper and
+% an abbreviated name of the conference (e.g., for Interact 2003
+% proceedings, use \textit{Proc. Interact 2003}). Do not include the
+% location of the conference or the exact date; do include the page
+% numbers if available. See the examples of citations at the end of this
+% document. Within this template file, use the \texttt{References} style
+% for the text of your citation.
+
+% Your references should be published materials accessible to the
+% public.  Internal technical reports may be cited only if they are
+% easily accessible (i.e., you provide the address for obtaining the
+% report within your citation) and may be obtained by any reader for a
+% nominal fee.  Proprietary information may not be cited. Private
+% communications should be acknowledged in the main text, not referenced
+% (e.g., ``[Robertson, personal communication]'').
+
+% \begin{table}
+%   \centering
+%   \begin{tabular}{|c|c|c|}
+%     \hline
+%     \tabhead{Objects} &
+%     \multicolumn{1}{|p{0.3\columnwidth}|}{\centering\tabhead{Caption --- pre-2002}} &
+%     \multicolumn{1}{|p{0.4\columnwidth}|}{\centering\tabhead{Caption --- 2003 and afterwards}} \\
+%     \hline
+%     Tables & Above & Below \\
+%     \hline
+%     Figures & Below & Below \\
+%     \hline
+%   \end{tabular}
+%   \caption{Table captions should be placed below the table.}
+%   \label{tab:table1}
+% \end{table}
+
+\section{Phase 4}
+
+
+\subsection{Interaction Sequences}
+\begin{enumerate}
+\item A user wants to improve her speaking. The user will click on reading materials, and then reading the he or she wants to read. After completing the reading, he or she will do some evaluations to test her reading comprehension.
+\item A user wants to practice her speaking. The user will click on Speaking \& Listening and then select whether to interact with an AI or a human. The user clicks on interacting with a human and then will begin with the conversation after being paired up with a native English speaker. After 5 minutes are up, the user will rate his or her conversation partner and have the option of continuing the conversation or starting a new one.
+\end{enumerate}
+\subsection{Prototype}
+\subsection{Usability Testing Plans}
+The purpose of our research is to understand how people interact with our application as well as how well our application is designed to solve the problems they have with their English. Also, we want to know if our application needs improvements in areas to help our intended users have a better experience. A brief description of our design concept is: to help people acquire new English skills that they didn't know, benefit them during study and help them integrate the native society as well as culture. We will brief the participants about the purpose of the study, explain the consent form to them, and ensure that they sign the consent form. We will then engage the participants by asking them to use our application prototype. Next after interacting with the application, we will them to fill in the questionnaires, take a semi-structured interview which will be no more than half an hour. We will also with their permission make observations as follows: observing how they interact with application and how quickly they can get themselves started on the application without requiring many instructions from us.
+\subsection{Results of Evaluation}
+\begin{enumerate}
+\item The prototype requires instructions to guide new users. However, a video walkthrough was considered unnecessary since it was simple to manipulate.
+\item Some buttons, like the difficulty bar, was not clear and the tests and reading materials don’t have abvious link. The suggestion was to put the difficulties in the test which could be chosen directly.
+\item
+\end{enumerate}
+
+% Headings for sub-subsections should be in Helvetica 9-point italic
+% with initial letters capitalized.  Standard {\textbackslash}section,
+% {\textbackslash}subsection, and {\textbackslash}subsubsection commands
+% will work fine.
+
+% \section{Figures/Captions}
+
+% Place figures and tables at the top or bottom of the appropriate
+% column or columns, on the same page as the relevant text
+% (see Figure~\ref{fig:figure1}). A figure or table may extend across both
+% columns to a maximum width of 17.78 cm (7 in.).
+
+% Captions should be Times New Roman 9-point bold.  They should be numbered (e.g.,
+% ``Table~\ref{tab:table1}'' or ``Figure~\ref{fig:figure2}''), centered
+% and placed beneath the figure or table.  Please note that the words
+% ``Figure'' and ``Table'' should be spelled out (e.g., ``Figure''
+% rather than ``Fig.'') wherever they occur.
+
+% Papers and notes may use color figures, which are included in the page
+% limit; the figures must be usable when printed in black and white in
+% the proceedings.  The paper may be accompanied by a short video figure
+% up to five minutes in length.  However, the paper should stand on its
+% own without the video figure, as the video may not be available to
+% everyone who reads the paper.
+
+% \section{Language, Style and Content}
+
+% The written and spoken language of SIGCHI is English. Spelling and
+% punctuation may use any dialect of English (e.g., British, Canadian,
+% US, etc.) provided this is done consistently. Hyphenation is
+% optional. To ensure suitability for an international audience, please
+% pay attention to the following:
+
+% \begin{itemize}
+% \item Write in a straightforward style.
+% \item Try to avoid long or complex sentence structures.
+% \item Briefly define or explain all technical terms that may be
+%   unfamiliar to readers.
+% \item Explain all acronyms the first time they are used in your text---e.g.,
+% ``Digital Signal Processing (DSP)''.
+% \item Explain local references (e.g., not everyone knows all city
+%   names in a particular country).
+% \item Explain ``insider'' comments. Ensure that your whole audience
+%   understands any reference whose meaning you do not describe (e.g.,
+%   do not assume that everyone has used a Macintosh or a particular
+%   application).
+% \item Explain colloquial language and puns. Understanding phrases like
+%   ``red herring'' may require a local knowledge of English.  Humor and
+%   irony are difficult to translate.
+% \item Use unambiguous forms for culturally localized concepts, such as
+%   times, dates, currencies and numbers (e.g., ``1-5-97'' or ``5/1/97''
+%   may mean 5 January or 1 May, and ``seven o'clock'' may mean 7:00 am or
+%   19:00).  For currencies, indicate equivalences---e.g., ``Participants
+%   were paid 10,000 lire, or roughly \$5.''
+% \item Be careful with the use of gender-specific pronouns (he, she)
+%   and other gendered words (chairman, manpower, man-months). Use
+%   inclusive language that is gender-neutral (e.g., she or he, they,
+%   s/he, chair, staff, staff-hours,
+%   person-years). See~\cite{Schwartz:1995:GBF} for further advice and
+%   examples regarding gender and other personal attributes.
+% \item If possible, use the full (extended) alphabetic character set
+%   for names of persons, institutions, and places (e.g.,
+%   Gr{\o}nb{\ae}k, Lafreni\'ere, S\'anchez, Universit{\"a}t,
+%   Wei{\ss}enbach, Z{\"u}llighoven, \r{A}rhus, etc.).  These characters
+%   are already included in most versions of Times, Helvetica, and Arial
+%   fonts.
+% \end{itemize}
+
+% \section{Accessibility}
+% The Executive Council of SIGCHI has committed to making SIGCHI conferences more inclusive for researchers, practitioners, and educators with disabilities. As a part of this goal, the all authors are asked to work on improving the accessibility of their submissions. Specifically, we encourage authors to carry out the following five steps:
+% \begin{enumerate}
+% 	\item Add alternative text to all figures
+% 	\item Mark table headings
+% 	\item Add tags to the PDF
+% 	\item Verify the default language
+% 	\item Set the tab order to ``Use Document Structure''
+% \end{enumerate}
+% Unfortunately good tools do not yet exist to create tagged PDF files from Latex. LaTeX users will need to carry out all of the above steps in the PDF directly using Adobe Acrobat, after the PDF has been generated.
+ 
+% For more information and links to instructions and resources, please see:
+% {\url{http://chi2014.acm.org/authors/guide-to-an-accessible-submission}}.
+
+% \section{Page Numbering, Headers and Footers}
+% Your final submission SHOULD NOT contain any footer or header string information 
+% at the top or bottom of each page. The submissions will be paginated in a determined 
+% order by the chairs and page numbers added to the pdf during the compiling, 
+% indexing, and pagination processes.
+
+% \section{Producing and Testing PDF Files}
+
+% We recommend that you produce a PDF version of your submission well
+% before the final deadline.  Your PDF file must be ACM DL
+% Compliant. The requirements for an ACM Compliant PDF are available at:
+% {\url{http://www.sheridanprinting.com/typedept/ACM-distilling-settings.htm}}.
+
+% Test your PDF file by viewing or printing it with the same software we
+% will use when we receive it, Adobe Acrobat Reader Version 7. This is
+% widely available at no cost from~\cite{acrobat}.  Note that most
+% reviewers will use a North American/European version of Acrobat
+% reader, which cannot handle documents containing non-North American or
+% non-European fonts (e.g. Asian fonts).  Please therefore do not use
+% Asian fonts, and verify this by testing with a North American/European
+% Acrobat reader (obtainable as above). Something as minor as including
+% a space or punctuation character in a two-byte font can render a file
+% unreadable.
+
+% \section{Blind Review}
+
+% For archival submissions, CHI requires a ``blind review.'' To prepare
+% your submission for blind review, remove author and institutional
+% identities in the title and header areas of the paper. You may also
+% need to remove part or all of the Acknowledgments text.  Further
+% suppression of identity in the body of the paper and references is
+% left to the authors' discretion. For more details, see the submission
+% guidelines and checklist for your submission category.
+
+\section{Conclusion}
+
+
+
+\section{Acknowledgments}
+
+% We thank CHI, PDC and CSCW volunteers, and all publications support
+% and staff, who wrote and provided helpful comments on previous
+% versions of this document.  Some of the references cited in this paper
+% are included for illustrative purposes only.  \textbf{Don't forget
+% to acknowledge funding sources as well}, so you don't wind up
+% having to correct it later.
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+\balance
+
+\bibliographystyle{acm-sigchi}
+\bibliography{sample}
+\end{document}
